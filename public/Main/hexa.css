@@ -1,3 +1,30 @@
+@media (max-width: 1400px) {
+    .col-md-3 {
+        width: 30%;
+        align-self: center;
+        flex-shrink: 0;
+        min-width: 300px;
+        width: auto;
+    }
+
+    .col-md-9 {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .col-md-3 {
+        min-width: 200px;
+    }
+}
+
 .inner-container {
     border: 5px;
     padding: 15px;
@@ -10,6 +37,31 @@
     text-align: center;
 }
 
+@media (max-width: 1400px) {
+    .left-side {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-side {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.profile-description {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1400px) {
+    .profile-description {
+        justify-content: space-between;
+    }
+}
+
 .inner-container.left-side .border-profile {
     border: #af89e6 solid 1px;
     height: 100%;
@@ -19,10 +71,47 @@
     margin-bottom: 5px;
 }
 
+@media (max-width: 1400px) {
+    .inner-container.left-side .border-profile {
+        height: fit-content;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .inner-container.left-side .border-profile {
+        padding: 10px 5px;
+    }
+}
+
 .inner-container.left-side #username {
     font-size: 25px;
     font-weight: bold;
     color: #000;
+}
+
+@media (max-width: 630px) {
+    .inner-container.left-side #username {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .inner-container.left-side #username {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 445px) {
+    .inner-container.left-side #username {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 370px) {
+    .inner-container.left-side #username {
+        font-size: 16px;
+    }
 }
 
 .inner-container.left-side #email {
@@ -31,7 +120,56 @@
     color: #000;
 }
 
-.inner-container.left-side button {
+@media (max-width: 630px) {
+    .inner-container.left-side #email {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .inner-container.left-side #email {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 445px) {
+    .inner-container.left-side #email {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .inner-container.left-side #email {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+.option-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@media (max-width: 1400px) {
+    .option-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .option-buttons {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 400px) {
+    .option-buttons {
+        flex-direction: column;
+    }
+}
+
+.option-buttons button {
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
@@ -39,20 +177,28 @@
     transition-duration: all 0.4s;
 }
 
-.inner-container.left-side button:hover {
+@media (max-width: 1400px) {
+    .option-buttons button {
+        width: fit-content;
+        margin-top: 10px;
+        align-self: center;
+    }
+}
+
+.option-buttons button:hover {
     background-color: rgb(245, 233, 255);
 }
 
-.inner-container.left-side button span {
+.option-buttons button span {
     position: relative;
     transition: 0.5s;
 }
 
-.inner-container.left-side button:hover span {
+.option-buttons button:hover span {
     padding-right: 25px;
 }
 
-.inner-container.left-side button span:after {
+.option-buttons button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -61,7 +207,7 @@
     transition: 0.5s;
 }
 
-.inner-container.left-side button:hover span:after {
+.option-buttons button:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -75,9 +221,26 @@
     margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+    .inner-container img.profile {
+        width: 50%;
+    }
+}
+
+@media (max-width: 370px) {
+    .inner-container img.profile {
+        width: 70%;
+    }
+}
+
 .inner-container.right-side form {
     display: flex;
-    height: 100px;
+}
+
+@media (max-width: 570px) {
+    .inner-container.right-side form {
+        flex-direction: column;
+    }
 }
 
 .inner-container.right-side form textarea {
@@ -89,12 +252,36 @@
     background-color: rgb(250, 245, 255);
 }
 
+@media (max-width: 570px) {
+    .inner-container.right-side form textarea {
+        width: 100%;
+        min-height: 100px;
+        resize: vertical;
+    }
+}
+
 .inner-container.right-side form button {
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
     border-radius: 5px;
     transition-duration: all 0.4s;
+}
+
+@media (max-width: 750px) {
+    .inner-container.right-side form button {
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 570px) {
+    .inner-container.right-side form button {
+        width: fit-content;
+        margin-top: 5px;
+        align-self: flex-end;
+        padding: 10px 15px;
+    }
 }
 
 .inner-container.right-side form button span {
@@ -141,11 +328,27 @@
     font-size: 20px;
 }
 
+@media (max-width: 770px) {
+    #allPostsWrapper .single-post .post-content {
+        font-size: 16px;
+    }
+}
+
 #allPostsWrapper .single-post .post-actions {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
     color: grey;
+}
+
+@media (max-width: 770px) {
+    #allPostsWrapper .single-post .post-actions {
+        flex-direction: column-reverse;
+    }
+    
+    #allPostsWrapper .single-post .post-actions p {
+        margin-top: 15px;
+    } 
 }
 
 #allPostsWrapper .single-post .post-actions div button.like-btn {
@@ -170,6 +373,12 @@
     background-color: transparent;
 }
 
+@media (max-width: 329px) {
+    #allPostsWrapper .single-post .post-actions div button.comment-btn {
+        margin-top: 5px;
+    }
+}
+
 #allPostsWrapper .single-post .post-actions div button.comment-btn:active{
     transform: translateY(4px);
 }
@@ -190,6 +399,20 @@
     text-transform: uppercase;
 }
 
+@media (max-width: 770px) {
+    #allPostsWrapper .single-post .post-actions div button.remove-btn {
+        font-size: 15px;
+        box-shadow: 0 6px #757575;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 415px) {
+    #allPostsWrapper .single-post .post-actions div button.remove-btn {
+        margin-top: 5px;
+    }
+}
+
 #allPostsWrapper .single-post .post-actions div button.remove-btn:hover {
     background-color: red; 
     color: white;
@@ -202,8 +425,17 @@
 }
 
 #allPostsWrapper .single-post .post-comments form {
+    display: flex;
+    flex-direction: row;
     height: 30px;
     margin-top: 15px;
+}
+
+@media (max-width: 570px) {
+    #allPostsWrapper .single-post .post-comments form {
+        flex-direction: column;
+        min-height: fit-content;
+    }
 }
 
 #allPostsWrapper .single-post .post-comments form input {
@@ -212,6 +444,16 @@
     font-size: 18px;
     padding: 10px;
     border-radius: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+@media (max-width: 570px) {
+    #allPostsWrapper .single-post .post-comments form input {
+        width: 100%;
+        min-height: 50px;
+        font-size: 15px;
+    }
 }
 
 #allPostsWrapper .single-post .post-comments form button {
@@ -253,4 +495,10 @@
     padding: 10px;
     margin-top: 15px;
     background-color: white;
+}
+
+@media (max-width: 570px) {
+    #allPostsWrapper .single-post .post-comments .single-comment {
+        font-size: 14px;
+    }
 }
