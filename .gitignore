@@ -3,5 +3,5 @@ node_modules/
 
 # Ignore the .env file in the src folder
 api/.env
-src/.env.local
+api/.env.local
 .vercel
